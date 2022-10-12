@@ -30,9 +30,11 @@ router.post('/save-to-do', function(req, res, next){
 //   res.redirect('/');
 // });
 
-router.get ('/delete-to-do/:id', function(req, res, next){
+router.get ('/delete-to-do/:id/:index', function(req, res, next){
+  console.log("Hello")
   console.log(req.params.id)
-  todos.splice(req.params.id, 1); //to remove the element at that index
+  todos.splice(req.params.index, 1); //to remove the element at that index
+  //need to change here
   res.redirect('/');
 });
 
